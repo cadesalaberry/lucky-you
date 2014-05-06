@@ -37,8 +37,8 @@
   <script id="card-template" type="text/x-handlebars-template">
 
     <div class="well">
-      <div class="ratio-keeper">
-        <div class="picture-container">
+      <div class="golden-ratio landscape">
+        <div class="golden-ratio-container">
           <div class="picture" style="background-image:url(./assets/images/{{{cover.picture_name}}});"></div>
         </div>
       </div>
@@ -48,20 +48,27 @@
 
     {{#each categories}}
     <h2>{{title}}</h2>
+    
     <div class="row">
+
       {{#each cards}}     
       <div class="col-md-4">
 
-        <div class="card">
-          
-          <div class="ratio-keeper">
-            <div class="picture-container">
-              <div class="picture" style="background-image:url(./assets/images/{{{picture_name}}});"></div>
-            </div>
-          </div>
-          <h2>{{title}}</h2>
-          <p>{{{description}}}</p>
+        <div class="golden-ratio portrait">
+          <div class="card golden-ratio-container">
 
+              <div class="golden-ratio landscape">
+                <div class="golden-ratio-container">
+                  <div class="picture" style="background-image:url(./assets/images/{{{picture_name}}});"></div>
+                </div>
+              </div>
+
+              <span class="card-details">
+                <h2 class="card-title">{{title}}</h2>
+                <p  class="card-description">{{{description}}}</p>
+              </span>
+
+          </div>
         </div>
 
       </div>{{/each}}

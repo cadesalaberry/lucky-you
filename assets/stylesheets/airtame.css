@@ -1,25 +1,23 @@
 h1, h2, p {
   text-align: center;
-  margin: 1rem 10%;
+  
 }
 
 h1 {
   font-size: 80px;
 }
 
+h2 {
+  font-size: 40px;
+  margin: 3rem;
+}
+
 p {
-  text-align:justify;
-  text-justify:inter-word;
-  padding-bottom: 3rem;
   font-size: 20px;
+  margin: 0 3rem;
 }
 
-.card {
-  background-color: #fcfcfc;
-  box-shadow: 0px 0px 2px 0px #5E5E5E;
-}
-
-.ratio-keeper {
+.golden-ratio {
   /* shrink to fit */
   display: inline-block;
   /* so .content can use position: absolute */
@@ -28,14 +26,22 @@ p {
   width: 100%;
 }
 
-.ratio-keeper::after {
-  /* percentage of containing block _width_ */
-  padding-top: 61.8%;
+.golden-ratio::after {
   display: block;
   content: '';
 }
 
-.picture-container {
+.landscape::after {
+  /* percentage of containing block _width_ */
+  padding-top: 61.8%;
+}
+
+.portrait::after {
+  /* percentage of containing block _width_ */
+  padding-top: 161.8%;
+}
+
+.golden-ratio-container {
   position: absolute;
   overflow: hidden;
   margin: 0;
@@ -53,6 +59,27 @@ p {
   margin: 0 auto;
   height: 100%;
 }
+
+.card {
+  background-color: #fcfcfc;
+  box-shadow: 0px 0px 2px 0px #5E5E5E;
+}
+
+.card-details {
+  height:100%;
+}
+
+.card-title {
+
+}
+
+.card-description {
+  display:inline-block;
+  vertical-align:middle;
+  text-align:justify;
+  text-justify:inter-word;
+}
+
 
 .footer {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
