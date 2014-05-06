@@ -1,0 +1,107 @@
+h1, h2, p {
+  text-align: center;
+  margin: 1rem 10%;
+}
+
+h1 {
+  font-size: 80px;
+}
+
+p {
+  text-align:justify;
+  text-justify:inter-word;
+  padding-bottom: 3rem;
+  font-size: 20px;
+}
+
+.card {
+  background-color: #fcfcfc;
+  box-shadow: 0px 0px 2px 0px #5E5E5E;
+}
+
+.ratio-keeper {
+  /* shrink to fit */
+  display: inline-block;
+  /* so .content can use position: absolute */
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.ratio-keeper::after {
+  /* percentage of containing block _width_ */
+  padding-top: 61.8%;
+  display: block;
+  content: '';
+}
+
+.picture-container {
+  position: absolute;
+  overflow: hidden;
+  margin: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
+.picture {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.footer {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  border-top: 1px solid #EAEAEA;
+  padding-top: 5px;
+  margin-top: 45px;
+  line-height: 1.42857;
+  font-size: 14px;
+  display: block;
+  color: #999;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+footer ul {
+  list-style: none outside none;
+  text-decoration: none;
+}
+
+a {
+  background: none repeat scroll 0% 0% transparent;
+}
+
+a:hover, a:focus {
+    text-decoration: underline;
+    color: #2A6496;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+a:focus {
+    outline: thin dotted;
+    outline-offset: -2px;
+}
+
+footer ul li {
+    margin-left: 10px;
+    float: left;
+}
+
+ul, ol {
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+
+footer ul {
+    list-style: none outside none;
+    float: right;
+}

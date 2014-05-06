@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Why I should join AIRTAME.</title>
+
+  <meta name="description" content="Why I should join AIRTAME.">
+  <meta name="author" content="cadesalaberry">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="cdesmontagnes">
+  <meta name="twitter:title" content="Why I should join AIRTAME.">
+  <meta name="twitter:description" content="French obsessed with digital excellence.">
+  <meta name="twitter:creator" content="cdesmontagnes">
+  <meta name="twitter:image:src" content="https://api.twitter.com/1/users/profile_image?screen_name=cdesmontagnes&size=bigger">
+  <meta name="twitter:domain" content="http://c4labz.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Why I should join AIRTAME.">
+  <meta property="og:site_name" content="Why I should join AIRTAME.">
+  <meta property="og:url" content="http://c4labz.com/">
+  <meta property="og:description" content="Why I should join AIRTAME.">
+  <meta property="og:image" content="https://api.twitter.com/1/users/profile_image?screen_name=cdesmontagnes&size=bigger">        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/stylesheets/airtame.css">
+  
+  <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <div class="container">
+    <h1></h1>
+    <div id="placeholder"></div>
+  </div>
+
+  <script id="card-template" type="text/x-handlebars-template">
+
+    <div class="well">
+      <div class="ratio-keeper">
+        <div class="picture-container">
+          <div class="picture" style="background-image:url(./assets/images/{{{cover.picture_name}}});"></div>
+        </div>
+      </div>
+      <h1>{{cover.title}}</h1>
+      <p><strong>{{cover.content}}</strong></p>
+    </div>
+
+    {{#each categories}}
+    <h2>{{title}}</h2>
+    <div class="row">
+      {{#each cards}}     
+      <div class="col-md-4">
+
+        <div class="card">
+          
+          <div class="ratio-keeper">
+            <div class="picture-container">
+              <div class="picture" style="background-image:url(./assets/images/{{{picture_name}}});"></div>
+            </div>
+          </div>
+          <h2>{{title}}</h2>
+          <p>{{{description}}}</p>
+
+        </div>
+
+      </div>{{/each}}
+
+    </div>{{/each}}
+
+  </script>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1-rc2/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.2/handlebars.min.js"></script>
+  <script>
+    var source   = $("#card-template").html();
+    var template = Handlebars.compile(source);
+
+    $.getJSON("./content.json", function(data){
+      var html    = template(data);
+      $("#placeholder").html(html);
+    });
+  </script>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="pull-left">
+        <small>
+          © 2014. All rights reserved.
+          Made with ♥ in <a href="http://c4labz.com/about/cadesalaberry">Montreal</a>
+
+        </small>
+      </div>
+      <div class="pull-right">
+        <nav>
+          <ul>
+            <li><a href="http://c4labz.com/about">About</a></li>
+            <li><a href="http://c4labz.com/">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </footer>
+  
+</body>
+
+</html>
