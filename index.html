@@ -37,6 +37,14 @@
 
   <link rel='prefetch' type='application/json' href="./content.json">
   
+  <!-- start Mixpanel -->
+  <script type="text/javascript">
+  (function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
+  for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f)}})(document,window.mixpanel||[]);
+  mixpanel.init("423beed176924aed9e7747d295cf421d");
+  </script>
+  <!-- end Mixpanel -->
+
 </head>
 
 <body>
@@ -70,9 +78,13 @@
 
               <div class="golden-ratio landscape">
                 <div class="golden-ratio-container">
-                  <div class="hover-mask" style="display:table;">
-                    <span class="hover-mask-content"><i class="fa fa-thumbs-up fa-5x"></i></span>
+
+                  <div class="hover-mask" style="display:table;" onclick="toggle_like(this, '{{title}}')">
+                    <span class="hover-mask-content">
+                      <i class="fa fa-thumbs-up fa-5x"></i>
+                    </span>
                   </div>
+
                   <div class="picture" style="background-image:url(./assets/images/{{{picture_name}}});"></div>
                 </div>
               </div>
@@ -102,6 +114,11 @@
       var html    = template(data);
       $("#placeholder").html(html);
     });
+
+    function toggle_like (card, name) {
+      console.log(name);
+      card.parentNode.parentNode.parentNode.parentNode.style.background = "#90EE90";
+    }
   </script>
 
   <footer class="footer">
@@ -123,7 +140,7 @@
       </div>
     </div>
   </footer>
-  
+
 </body>
 
 </html>
