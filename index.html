@@ -7,6 +7,10 @@
 
   <meta name="description" content="Why I should join AIRTAME.">
   <meta name="author" content="cadesalaberry">
+
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="cdesmontagnes">
   <meta name="twitter:title" content="Why I should join AIRTAME.">
@@ -14,18 +18,23 @@
   <meta name="twitter:creator" content="cdesmontagnes">
   <meta name="twitter:image:src" content="https://api.twitter.com/1/users/profile_image?screen_name=cdesmontagnes&size=bigger">
   <meta name="twitter:domain" content="http://c4labz.com/">
+
   <meta property="og:type" content="website">
   <meta property="og:title" content="Why I should join AIRTAME.">
   <meta property="og:site_name" content="Why I should join AIRTAME.">
   <meta property="og:url" content="http://c4labz.com/">
   <meta property="og:description" content="Why I should join AIRTAME.">
-  <meta property="og:image" content="https://api.twitter.com/1/users/profile_image?screen_name=cdesmontagnes&size=bigger">        <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:image" content="https://api.twitter.com/1/users/profile_image?screen_name=cdesmontagnes&size=bigger">
 
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="./assets/stylesheets/airtame.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Merriweather:400,300,700'>
+  <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600'>
+  <link rel='stylesheet' type='text/css' href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link rel='stylesheet' href='//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css'>
+
+  <link rel='stylesheet' type='text/css' href="./assets/stylesheets/airtame.css">
   
-  <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,700' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -54,19 +63,22 @@
       {{#each cards}}     
       <div class="col-md-4">
 
-        <div class="golden-ratio portrait">
-          <div class="card golden-ratio-container">
+        <div class="card golden-ratio portrait">
+          <div class="golden-ratio-container">
 
               <div class="golden-ratio landscape">
                 <div class="golden-ratio-container">
+                  <div class="hover-mask" style="display:table;">
+                    <span class="hover-mask-content"><i class="fa fa-thumbs-up fa-5x"></i></span>
+                  </div>
                   <div class="picture" style="background-image:url(./assets/images/{{{picture_name}}});"></div>
                 </div>
               </div>
 
-              <span class="card-details">
+              <div class="card-details">
                 <h2 class="card-title">{{title}}</h2>
                 <p  class="card-description">{{{description}}}</p>
-              </span>
+              </div>
 
           </div>
         </div>
@@ -79,6 +91,7 @@
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1-rc2/jquery.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.2/handlebars.min.js"></script>
+
   <script>
     var source   = $("#card-template").html();
     var template = Handlebars.compile(source);

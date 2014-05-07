@@ -14,7 +14,7 @@ h2 {
 
 p {
   font-size: 20px;
-  margin: 0 3rem;
+  margin: 0 10%;
 }
 
 .golden-ratio {
@@ -24,6 +24,28 @@ p {
   position: relative;
   text-align: center;
   width: 100%;
+}
+
+.hover-mask {
+  display: table;
+  position: absolute;
+  margin: auto auto;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
+
+.hover-mask-content {
+  vertical-align: middle;
+  display: table-cell;
+  font-size: 3rem;
+  color:#fcfcfc;
+  opacity: .92;
+}
+
+.hover-mask:hover {
+  background: rgba(0,0,0,.1);
+  opacity: 1;
 }
 
 .golden-ratio::after {
