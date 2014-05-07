@@ -85,6 +85,7 @@ p {
 .card {
   background-color: #fcfcfc;
   box-shadow: 0px 0px 2px 0px #5E5E5E;
+  margin: 1rem 0;
 }
 
 .card-details {
