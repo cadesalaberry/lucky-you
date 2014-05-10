@@ -73,7 +73,7 @@
       {{#each cards}}     
       <div class="col-md-4">
 
-        <div class="card golden-ratio portrait">
+        <div class="card golden-ratio portrait" data-scroll-reveal="enter bottom over 1s and move 300px after 0.3s">
           <div class="golden-ratio-container">
 
               <div class="golden-ratio landscape">
@@ -103,8 +103,9 @@
 
   </script>
 
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1-rc2/jquery.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.2/handlebars.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/0.1.2/scrollReveal.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1-rc2/jquery.min.js"></script>
 
   <script>
     var source   = $("#card-template").html();
@@ -115,9 +116,25 @@
       $("#placeholder").html(html);
     });
 
-    function toggle_like (card, name) {
-      console.log(name);
-      card.parentNode.parentNode.parentNode.parentNode.style.background = "#90EE90";
+    function toggle_like (clicked, name) {
+      card = clicked.parentNode.parentNode.parentNode.parentNode;
+      
+      if (card.style.background === "rgba(144, 238, 144, 0.2)") {
+      
+        console.log("Unliked " + name + " " + card.style.background);
+        card.style.background = "rgb(252, 252, 252)";
+      } else {
+      
+        console.log("Liked " + name + " " + card.style.background);
+        card.style.background = "rgba(144, 238, 144, 0.2)";
+      }
+    }
+
+    function set_email () {
+      email = 'bullshit';
+      mixpanel.register({'Email': email});
+      mixpanel.people.set({'$email': email});
+      console.log('email ' + email + 'successfully sent.');
     }
   </script>
 

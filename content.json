@@ -2,41 +2,41 @@
 {
   "cover" : {
     "title" : "YOU WANT ME",
-    "content" : "If you arrived here, it means you are really interested into my skills, and I cannot be more happy! After reading this page, you should want nothing but hire me. So let's get started on why I should join AIRTAME.",
+    "content" : "CONGRATULATIONS! If you arrived here, it means you are in desperate need of my software expertise, and this could not make me more happy! After reading this page, you will know exactly what I am capable of and what I can do to make your life easier. So let's get started on why I should join AIRTAME.",
     "picture_name" : "uncle_sam.png"
   },
   "categories" : [
       {
-      "title" : "Skills",
+      "title" : "Skills", 
       "cards" : [
         {
           "title" : "Degree",
-          "description" : "I am finishing my Bachelor of Software Engineering at <a href='https://mcgill.ca' target='_blank'>McGill University</a>. I am missing 5 classes which I will do next semester.",
+          "description" : "I am finishing my Bachelor's Degree in Software Engineering at <a href='https://mcgill.ca' target='_blank'>McGill University</a>. I have 5 classes remaining in my degree which I expect to finish by December 2014.",
           "picture_name" : "mcgill-logo-transparent.png"
         },
         {
           "title" : "C",
-          "description" : "I have developped a simple file system in C (<a href='https://github.com/cadesalaberry/SimpleFS' target='_blank'>SimpleFS</a>). It is far from being exploitable, but the doc should help you understand how it works.",
+          "description" : "I have developed a simple file system in C (<a href='https://github.com/cadesalaberry/SimpleFS' target='_blank'>SimpleFS</a>). Although the system is not yet production ready, the accompanying document should help you understand how it works.",
           "picture_name" : "simplefs.png"
         },
         {
           "title" : "C++",
-          "description" : "I have not had a lot of experience with C++, but I am not afraid to learn. After playing a bit with MIPS, I must admit new languages don't scare me no more.",
+          "description" : "I have not had a lot of experience with C++, but I am not afraid to learn. After playing a bit with MIPS, I must admit the prospect of learning a new programming language tickles my fancy.",
           "picture_name" : ""
         },
         {
           "title" : "OSS",
-          "description" : "I have never bought a single software in my life: The Open Source Mentality might be one of my strongest trait as of today (after being awesome obviously).",
+          "description" : "I have never bought a single software in my life: The Open Source Mentality might be one of my strongest traits as of today (after being awesome obviously).",
           "picture_name" : "opensourceinitiative.png"
         },
         {
           "title" : "TCP/IP",
-          "description" : "Last semester, a close friend and I started <a href='https://bit.ly/airplay-report' target='_blank'> to study in depth the AirPlay Protocol</a>. You can also check out <a href='https://bit.ly/airplay-presentation' target='_blank'>the presentation</a>.",
+          "description" : "Last semester, a close friend and I started <a href='https://bit.ly/airplay-report' target='_blank'> to perform an in-depth study on the AirPlay Protocol</a>. You can also check out <a href='https://bit.ly/airplay-presentation' target='_blank'>the presentation</a>.",
           "picture_name" : "airplay-logo-small.png"
         },
         {
           "title" : "OOP",
-          "description" : "Even if it is not my favourite language, I must admit Java is one of my strong suit. My team and I got the highest goals with our <a href='https://github.com/cadesalaberry/StormChaser' target='_blank'>StormChaser</a> back in 2012.",
+          "description" : "Even if it is not my favourite language, I must admit Java is one of my strong suits. My team and I got the highest number of goals with our <a href='https://github.com/cadesalaberry/StormChaser' target='_blank'>StormChaser</a> back in 2012.",
           "picture_name" : "programming-small.jpg"
         },
         {
@@ -46,17 +46,17 @@
         },
         {
           "title" : "Cross-Platform",
-          "description" : "I tried my first linux distro (Mandriva) in 2004, and quickly gave up on Windows back in 2008. I switched distros multiple times, going from Mint, Ubuntu, elementaryOS, Puppy, to end up on Fedora, on which I have been for the past 4 years.",
+          "description" : "I tried my first linux distro (Mandriva) in 2004, and quickly gave up on Windows back in 2008. I switched distros multiple times - going from Mint, Ubuntu, elementaryOS and Puppy - to end up on Fedora, on which I have been for the past 4 years.",
           "picture_name" : "fedora-small.png"
         },
         {
           "title" : "Version Control",
-          "description" : "I only swear by git. I have tried others such as SVN and Mercurial, but the hype around GitHub made me throw everything on git. No regrets fosho. ",
+          "description" : "I only swear by git. I have tried others such as SVN and Mercurial, but the hype around GitHub made me throw everything on git. No regrets fosho.",
           "picture_name" : "github.png"
         },
         {
           "title" : "Documentation",
-          "description" : "For what concerns documentation, I cultivate a strong hatred for github repos without README...",
+          "description" : "For what concerns documentation, I cultivate a strong hatred for github repositories without README...",
           "picture_name" : "github.png"
         }
       ]
