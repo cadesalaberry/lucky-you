@@ -1,4 +1,4 @@
-hire-me
+Lucky-you
 =======
 
 A template to facilitate your hire in a start-up work environment.
@@ -10,6 +10,12 @@ This is where all of YOU go. it has the following format:
 
 ```json
 {
+    "analytics" : {
+    "Mixpanel" : {
+      "token" : "423beed176924aed9e7747d295cf421d",
+      "people" : true
+    }
+  },
   "cover" : {
     "title" : "title_of_the_cover_card",
     "content" : "text_below_the_cover_card [supports html formating]",
@@ -74,7 +80,8 @@ The main purpose of this project is to get feedback on your skills,
 which is why I added analytics. My choice went to [mixpanel](https://mixpanel.com)
 for their awesome design and the free 30000 data points.
 
-To start getting feedback on your mixpanel account, change the mixpanel token to yours.
+To start getting feedback on your mixpanel account, change the the value of
+`analytics.Mixpanel.token` to your token.
 
 
 # Contribute
