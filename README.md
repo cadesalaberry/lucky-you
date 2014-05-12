@@ -68,6 +68,14 @@ Please try to limit the text fields to the following:
 | `card.description` |           ~256  |
 
 
+## Analytics
+
+The main purpose of this project is to get feedback on your skills,
+which is why I added analytics. My choice went to [mixpanel](https://mixpanel.com)
+for their awesome design and the free 30000 data points.
+
+To start getting feedback on your mixpanel account, change the mixpanel token to yours.
+
 
 # Contribute
 
