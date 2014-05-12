@@ -62,7 +62,7 @@
         <form role="form" onsubmit="return set_email(this)" class="form-inline" target="_blank">
           
           <div class="form-group has-feedback">
-
+              <label class="sr-only" for="email">Email address</label>
               <span class="fa fa-envelope form-control-feedback"></span>
               <input type="email" id="email" class="form-control" placeholder="your@email.com">
           
@@ -161,6 +161,10 @@
       }
     }
 
+    function success(form) {
+
+    }
+
     function set_email (form) {
       user_email = form.email.value;
 
@@ -171,6 +175,7 @@
         analytics.identify({
           email: user_email
         });
+        success(form);
       }
       return false;
     }
