@@ -57,11 +57,12 @@
     <hr>
 
     <div class="row">
-      <div class="col-md-4 col-md-offset-4">
+      <div class="center-block">
 
         <form role="form" onsubmit="return set_email(this)" class="form-inline" target="_blank">
           
           <div class="form-group has-feedback">
+
               <label class="sr-only" for="email">Email address</label>
               <span class="fa fa-envelope form-control-feedback"></span>
               <input type="email" id="email" class="form-control" placeholder="your@email.com">
@@ -135,12 +136,12 @@
     var template = Handlebars.compile(source);
 
     $.getJSON("./content.json", function(data){
+      
       var html    = template(data);
       $("#placeholder").html(html);
-    });
 
-    analytics.initialize({
-      'Mixpanel' : {token   : '423beed176924aed9e7747d295cf421d', people : true}
+      analytics.initialize(data.analytics);
+      console.log('analytics.js initialised.');
     });
     
     analytics.page('airtame');
