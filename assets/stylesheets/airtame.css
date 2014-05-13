@@ -12,22 +12,22 @@ h1 {
 
 h2 {
   font-size: 4rem;
-  margin: 3rem;
-}
-
-@media screen and (max-width : 345px) {
-  p {
-    font-size: 1.8rem;
-  }
-}
-@media screen and (min-width : 320px) {
-  p {
-    font-size: 2rem;
-  }
+  margin: 2rem 3rem;
 }
 
 p {
+  font-size: 1.9rem;
   margin: 0 10%;
+}
+
+@media screen and (max-width : 400px) {
+  p {
+    font-size: 1.7rem;
+  }
+  h2 {
+    font-size: 3rem;
+    margin: 1.8rem 2.8rem;
+  }
 }
 
 .golden-ratio {
