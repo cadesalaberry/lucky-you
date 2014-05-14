@@ -16,49 +16,41 @@ h2 {
 }
 
 p {
-  font-size: 1.9rem;
+  font-size: 2rem;
   margin: 0 10%;
 }
 
-@media screen and (max-width : 400px) {
-  p {
-    font-size: 1.7rem;
-  }
+/*
+ * Deals with the text size on different screens.
+ */
+@media screen and (max-width : 991px) {
   h2 {
+    font-size: 5rem;
+    margin: 2rem 3rem;
+  }
+  p {
     font-size: 3rem;
+  }
+}
+@media screen and (max-width : 570px) {
+  h2 {
+    font-size: 4rem;
     margin: 1.8rem 2.8rem;
   }
+  p {
+    font-size: 2rem;
+  }
 }
 
+/* 
+ * Takes care of the format of the cards and pictures 
+ * to respect the golden ratio.
+ */
 .golden-ratio {
-  /* shrink to fit */
-  display: inline-block;
-  /* so .content can use position: absolute */
-  position: relative;
   text-align: center;
+  position: relative;
+  display: inline-block;
   width: 100%;
-}
-
-.hover-mask {
-  display: table;
-  position: absolute;
-  margin: auto auto;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-}
-
-.hover-mask-content {
-  vertical-align: middle;
-  display: table-cell;
-  font-size: 3rem;
-  color:#fcfcfc;
-  opacity: .92;
-}
-
-.hover-mask:hover {
-  background: rgba(0,0,0,.1);
-  opacity: 1;
 }
 
 .golden-ratio::after {
@@ -86,6 +78,31 @@ p {
   top: 0;
 }
 
+/*
+ * Formats properly the like button on the picture.
+ */
+.hover-mask {
+  display: table;
+  position: absolute;
+  opacity: 0;
+  margin: auto auto;
+  height: 100%;
+  width: 100%;
+}
+
+.hover-mask-content {
+  vertical-align: middle;
+  font-size: 3rem;
+  display: table-cell;
+  opacity: .92;
+  color: #fcfcfc;
+}
+
+.hover-mask:hover {
+  background: rgba(0,0,0,.1);
+  opacity: 1;
+}
+
 .picture {
   background-position: center;
   background-repeat: no-repeat;
@@ -96,8 +113,8 @@ p {
 }
 
 .card {
-  box-shadow: 0px 0px 2px 0px #5E5E5E;
   background-color: #fcfcfc;
+  box-shadow: 0px 0px 2px 0px #5E5E5E;
   margin: 1rem 0;
 }
 
@@ -105,15 +122,10 @@ p {
   height:100%;
 }
 
-.card-title {
-
-}
-
 .card-description {
-  display:inline-block;
-  vertical-align:middle;
-  text-align:justify;
-  text-justify:inter-word;
+  vertical-align: middle;
+  text-align: center;
+  display: inline-block;
 }
 
 
@@ -135,6 +147,10 @@ footer ul {
   list-style: none outside none;
   text-decoration: none;
 }
+
+/*
+ * General style definitions.
+ */
 
 a {
   background: none repeat scroll 0% 0% transparent;
