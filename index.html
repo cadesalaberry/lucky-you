@@ -119,9 +119,8 @@
 
       analytics.initialize(data.analytics);
       console.log('analytics.js initialised.');
+      analytics.page('airtame');
     });
-    
-    analytics.page('airtame');
 
     function toggle_like (clicked, name) {
       card = clicked.parentNode.parentNode.parentNode.parentNode;
