@@ -1,6 +1,9 @@
 
 {
   "analytics" : {
+    "Google Analytics" : {
+      "trackingId" : "UA-46518403-1"
+    },
     "Mixpanel" : {
       "token" : "e5014d04b0fad7eb3da98ca5f4e7c405",
       "people" : true
