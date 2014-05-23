@@ -126,6 +126,19 @@ p {
   text-align: center;
 }
 
+.circular {
+  /*-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  box-shadow: 0 0 8px rgba(0, 0, 0, .8);*/
+  -webkit-border-radius: 150px;
+  -moz-border-radius: 150px;
+  border-radius: 150px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin: 2rem;
+  height: 300px;
+  width: 300px;
+}
 
 .footer {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
