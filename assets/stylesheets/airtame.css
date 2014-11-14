@@ -4,7 +4,9 @@ h1, h2, p {
 }
 
 body {
-  background: rgb(245, 245, 245);
+  background: rgb(245, 245, 245); /*Whitish*/
+  background: #E5E5E5; /*Google grey*/
+  
 }
 h1 {
   font-size: 8rem;
