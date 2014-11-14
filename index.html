@@ -85,7 +85,7 @@
       {{#each cards}}     
       <div class="col-md-4">
 
-        <div class="card golden-ratio portrait" data-scroll-reveal="enter bottom over 1s and move 300px after 0.3s">
+        <div class="card golden-ratio portrait">
           <div class="golden-ratio-container">
 
               <h2 class="card-title">{{title}}</h2>
@@ -93,7 +93,7 @@
               <div class="golden-ratio landscape">
                 <div class="golden-ratio-container">
 
-                  <div class="hover-mask" style="display:table;" onclick="toggle_like(this, '{{title}}')">
+                  <div class="hover-mask" onclick="toggle_like(this, '{{title}}')">
                     <span class="hover-mask-content">
                       <i class="fa fa-thumbs-up fa-5x"></i>
                     </span>
