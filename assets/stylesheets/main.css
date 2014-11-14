@@ -1,6 +1,6 @@
 h1, h2, p {
   text-align: center;
-  
+  font-family: 'Open Sans', arial,sans-serif;
 }
 
 body {
@@ -14,7 +14,7 @@ h1 {
 
 h2 {
   font-size: 4rem;
-  margin: 2rem 3rem;
+  margin: 1rem 2rem;
 }
 
 p {
@@ -84,6 +84,9 @@ p {
  * Formats properly the like button on the picture.
  */
 .hover-mask {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
   display: table;
   position: absolute;
   opacity: 0;
@@ -115,7 +118,7 @@ p {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  margin: 0 auto;
+  margin: 0 0.5rem;
   height: 100%;
 }
 
@@ -128,13 +131,14 @@ p {
   margin: 1rem 0;
 }
 
-.card-details {
-  height:100%;
+.card-title {
+  text-align: left;
 }
 
 .card-description {
   vertical-align: middle;
-  text-align: center;
+  text-align: left;
+  margin-top: 1rem;
 }
 
 .circular {

@@ -88,6 +88,8 @@
         <div class="card golden-ratio portrait" data-scroll-reveal="enter bottom over 1s and move 300px after 0.3s">
           <div class="golden-ratio-container">
 
+              <h2 class="card-title">{{title}}</h2>
+
               <div class="golden-ratio landscape">
                 <div class="golden-ratio-container">
 
@@ -101,10 +103,7 @@
                 </div>
               </div>
 
-              <div class="card-details">
-                <h2 class="card-title">{{title}}</h2>
-                <p  class="card-description">{{{description}}}</p>
-              </div>
+              <p  class="card-description">{{{description}}}</p>
 
           </div>
         </div>
@@ -134,21 +133,18 @@
     });
 
     function toggle_like (clicked, name) {
-      card = clicked.parentNode.parentNode.parentNode.parentNode;
+      is_liked = (' ' + clicked.className + ' ').indexOf(' hover-mask-liked ') > -1;
       
-      //if (card.style.background === "rgba(144, 238, 144, 0.2)") {
       // Checks if the liked card was already liked
-      if ((' ' + clicked.className + ' ').indexOf('hover-mask-liked') > -1) {
+      if (is_liked) {
       
         console.log("Unliked " + name);
         analytics.track('Unliked', {card_name : name});
-        //card.style.background = "rgb(252, 252, 252)";
         clicked.className = clicked.className.replace(/(?:^|\s)hover-mask-liked(?!\S)/,'');
       } else {
       
         console.log("Liked " + name);
         analytics.track('Liked', {card_name : name});
-        //card.style.background = "rgba(144, 238, 144, 0.2)";
         clicked.className += " hover-mask-liked";
       }
     }
