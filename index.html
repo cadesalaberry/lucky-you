@@ -136,16 +136,20 @@
     function toggle_like (clicked, name) {
       card = clicked.parentNode.parentNode.parentNode.parentNode;
       
-      if (card.style.background === "rgba(144, 238, 144, 0.2)") {
+      //if (card.style.background === "rgba(144, 238, 144, 0.2)") {
+      // Checks if the liked card was already liked
+      if ((' ' + clicked.className + ' ').indexOf('hover-mask-liked') > -1) {
       
         console.log("Unliked " + name);
         analytics.track('Unliked', {card_name : name});
-        card.style.background = "rgb(252, 252, 252)";
+        //card.style.background = "rgb(252, 252, 252)";
+        clicked.className = clicked.className.replace(/(?:^|\s)hover-mask-liked(?!\S)/,'');
       } else {
       
         console.log("Liked " + name);
         analytics.track('Liked', {card_name : name});
-        card.style.background = "rgba(144, 238, 144, 0.2)";
+        //card.style.background = "rgba(144, 238, 144, 0.2)";
+        clicked.className += " hover-mask-liked";
       }
     }
 
