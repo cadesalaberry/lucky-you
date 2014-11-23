@@ -35,26 +35,22 @@
     <div class="row">
       <div class="col-md-offset-4 col-md-4">
 
-        <div class="container-fluid">
+        <!-- <div class="container-fluid"> -->
             
             <div class="circular center-block" style="background-image: url(./assets/images/me.jpg);"></div>
 
             <div class="center-block" style="width:310px;">
             <form role="form" onsubmit="return feedback(this)" class="form-inline" target="_blank">
               
-              <div class="form-group row">
+              <div class="form-group">
                 <div class="col-xs-9">
-                  <div class="row">
                       <label class="sr-only control-label" for="name">Name</label>
                       <input type="text" id="name" class="form-control" placeholder="Your Name">
-                  </div>
-                  <div class="row">
                       <label class="sr-only control-label" for="email">Email Address</label>
                       <input type="" id="email" class="form-control" placeholder="your@email.com">
-                  </div>
                 </div>
              
-                <div class="col-xs-3">
+                <div class="col-xs-3" style="padding: 0;">
                   <button type="submit" id="submit" class="btn btn-circle">
                     <i class="fa fa-check"></i>
                   </button>
@@ -65,7 +61,7 @@
             </div>
 
           </div>
-        </div>
+        <!-- </div> -->
       </div>
     </div>
   
@@ -139,7 +135,7 @@
       $("#placeholder").html(html);
 
       analytics.initialize(data.analytics);
-      console.log('analytics.js initialised.');
+      console.log('analytics.js initialised with: ' + JSON.stringify(data.analytics));
       analytics.page('airtame');
     });
 
@@ -165,15 +161,17 @@
     }
 
     function feedback (form) {
+      user_name = form.name.value;
       user_email = form.email.value;
 
       if (user_email) {
 
-        console.log('email ' + user_email + ' successfully sent.');
+        console.log('feedback: ' + user_name + ' (' + user_email + ').');
         
-        analytics.identify({email: user_email});
+        analytics.identify({name: user_name, email: user_email}, function (){console.log('feedback: identified.')});
         
-        success(form);
+        document.getElementById("submit").disabled = true;
+        //success(form);
       }
       return false;
     }
