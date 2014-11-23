@@ -70,11 +70,11 @@
 
   <script id="card-template" type="text/x-handlebars-template">
 
-    <div class="row card">
-      <div class="col-md-4 picture" style="height:33rem;width:33rem;background-image:url({{{cover.picture_path}}});"></div>
-      <div class="col-md-8">
-        <h1>{{cover.title}}</h1>
-        <p><strong>{{{cover.content}}}</strong></p>
+    <div class="row card vertical-align">
+      <div class="col-md-4 picture" style="height:30rem; background-image:url({{{cover.picture_path}}});"></div>
+      <div class="col-md-7">
+        <h1 class="cover-title">{{cover.title}}</h1>
+        <p class="cover-content">{{{cover.content}}}</p>
       </div>
     </div>
 
