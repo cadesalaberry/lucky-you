@@ -184,6 +184,7 @@ p {
 footer ul {
   list-style: none outside none;
   text-decoration: none;
+  line-height: 2;
 }
 
 /*
